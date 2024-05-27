@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавь героя</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero-form">
+        <label for="heroName">Имя героя:</label>
+        <input type="text" id="heroName"  placeholder="Введите имя героя">
+        <span class="char-counter" id="heroNameCounter">0 / 20</span>
+
+        <label for="heroClass">Класс героя:</label>
+        <input type="text" id="heroClass"  placeholder="Введите класс героя">
+        <span class="char-counter" id="heroClassCounter">0 / 20</span>
+
+
+        <button onclick="addHero()">Добавить героя</button>
+    </div>
+
+<!-- Кнопка и выпадающий список для фильтрации по классу -->
+<div class="filter-by-class">
+    <label for="classFilter">Сортировка:</label>
+    <select id="classFilter">
+        <option value="">Все классы</option>
+        <option value="Танк">Танк</option>
+        <option value="Поддержка">Поддержка</option>
+        <!-- Добавьте дополнительные опции для других классов -->
+    </select>
+    <button onclick="filterByClass()">Сортировать</button>
+</div>
+
+    
+    <div id="heroesContainer" class="hero-container">
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
